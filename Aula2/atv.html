@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../SRC/Styles/atv.css">
+    <title>TechFood - Cardápio Digital</title>
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="logo">TechFood</div>
+        <button aria-label="Botão Pesquisar" class="search-icon">🔍</button>
+        <button aria-label="Botão de carrinho de compra" class="cart-icon">🛒</button>
+    </header>
+
+    <main>
+        <section class="banner-hero">
+            <h1>Sabor & Saber</h1>
+            <p>A melhor gastronomia tecnológica da região.</p>
+        </section>
+
+
+
+
+        <section id="menu-container">
+            <nav class="abas-lista" role="tablist" aria-label="Categorias de comida">
+                <input type="radio" name="categoria" id="massa" checked class="sr-only">
+                <label for="massa" tabindex="0" role="tab" aria-selected="true">Massas</label>
+
+                <input type="radio" name="categoria" id="bebida" class="sr-only">
+                <label for="bebida" tabindex="0" role="tab" aria-selected="false">Bebidas</label>
+            </nav>
+
+            <section class="aba-tela" id="tela-massas">
+                <section class="grid-produtos">
+                    <article class="card">
+                        <img src="../SRC/img/Lasanha.jpg" alt="Comida Lasanha">
+                        <h3>Lasanha Tradicional</h3>
+                        <p>Massa artesanal ao molho bolonhesa com 4 queijos.</p>
+                        <span class="preco">R$ 45,90</span>
+                        <button aria-label="botão de Pedir Lasanha" class="btn-pedir"
+                            onclick="alert('Adicionado')">Pedir</button>
+                    </article>
+
+                    <article clas="card">
+                        <img src="../SRC/img/ravioli.jpg" alt="Comida Ravioli">
+                        <h3>Ravioli de Espinafre</h3>
+                        <p>Recheado com ricota fresca e nozes picadas.</p>
+                        <span class="preco">R$ 39,00</span>
+                        <button aria-label="botão de Pedir ravioli" class="btn-pedir">Pedir</button>
+                    </article>
+                </section>
+            </section>
+    </main>
+
+
+    <footer class="rodape">
+        <p>Siga-nos: <button aria-label="botão do Facebook" href="#">FB</button>
+            <button aria-label="botão de Instagram" href="#">IG</a>
+        </p>
+    </footer>
+</body>
+
+</html>
