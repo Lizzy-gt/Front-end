@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo TechFood- grid + media Querry</title>
+    <link rel="stylesheet" href="../Aula3/style.css">
+</head>
+
+<body>
+    <header id="topo_loja">
+        <h1>TechFood - Sabor & Saber </h1>
+        <input type="checkbox" id="bt_menu">
+        <label for="bt_menu" id="label_menu">&#9776</label>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="#secao_massa">Massa</a></li>
+                <li><a href="#secao_sobremesa">Sobremesa</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="secao_massa">
+            <h2 class="titulo_secao">
+                Nossas Massas
+            </h2>
+            <div class="Vitrine_grid">
+                <article class="card">
+                    <img src="../SRC/img/Lasanha.jpg" alt="Lasanha a bolonhesa">
+                    <h3> Lasanha a bolonhesa.</h3>
+                    <p class="desc"> Massa artesanal e molho especial</p>
+                    <span class="preco">R$ 45.00</span>
+                    <button class="bt_pedido">Pedir agora</button>
+                </article>
+
+                <article class="card">
+                    <img src="../SRC/img/ravioli.jpg" alt="Ravioli">
+                    <h3> Ravioli.</h3>
+                    <p class="desc"> Pasta com queijos pratos. </p>
+                    <span class="preco">R$ 50.00</span>
+                    <button class="bt_pedido">Pedir agora</button>
+                </article>
+
+                <article class="card">
+                    <img src="../SRC/img/Nhoque.jpg" alt="Nhoque">
+                    <h3> Nhoque com muito Sabor.</h3>
+                    <p class="desc"> Pasta extremamente gostosa.</p>
+                    <span class="preco">R$ 35.00</span>
+                    <button class="bt_pedido">Pedir agora</button>
+                </article>
+            </div>
+        </section>
+        <section id="secao_sobremesa">
+            <h2 class="titulo_secao">
+                Nossas Sobremesas
+            </h2>
+            <div class="Vitrine_grid">
+                <article class="card">
+                    <img src="../SRC/img/brownie.jpg" alt="Brownie">
+                    <h3> Brownie com gotas de chocolate.</h3>
+                    <p class="desc"> chocolate colidos diretamente da Âmazonia.</p>
+                    <span class="preco">R$ 25.00</span>
+                    <button class="bt_pedido">Pedir agora</button>
+                </article>
+
+                <article class="card">
+                    <img src="../SRC/img/Bolo.jpg" alt="Bolo RedVelvt">
+                    <h3> Ravioli.</h3>
+                    <p class="desc"> Bolo com frutas vermelhas dos câmpos de chineses.</p>
+                    <span class="preco">R$ 80.00</span>
+                    <button class="bt_pedido">Pedir agora</button>
+                </article>
+
+                <article class="card">
+                    <img src="../SRC/img/Pudim.jpg" alt="Pudim">
+                    <h3> Pudim com leite condensado.</h3>
+                    <p class="desc"> Caramelo colhido do núcleo da terra.</p>
+                    <span class="preco">R$ 35.00</span>
+                    <button class="bt_pedido">Pedir agora</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer id="rodape">
+        <div class="info_footer">
+            <p><strong>TechFood 2026 &#169</strong></p>
+            <p>Rua Rusia Jardim Planalto Salto-sp</p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
