@@ -7,7 +7,7 @@ fotoPerfil.src = "./src/img/foto_de_perfil.png"
 const corFundo = document.querySelector('#container-perfil')
 corFundo.style.backgroundColor = '#f1ecb4'
 
-const statusUsuario = document.getElementById('badge-status');
+const statusUsuario = document.getElementById('badge-status')
 if (statusUsuario) {
     statusUsuario.classList.add('online')
     statusUsuario.textContent = 'Status: Online'
