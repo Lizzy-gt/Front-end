@@ -15,3 +15,4 @@ if (statusUsuario) {
 
 const qtndSkill = document.querySelectorAll('.skill')
 console.log('Quantidade de skill que ele tem:', qtndSkill.length)
+
