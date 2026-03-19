@@ -1,0 +1,52 @@
+body {
+    background: #9bc1a7;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+#container-perfil {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+#foto-perfil {
+    border-radius: 50%;
+    border: 4px solid #afb57b;
+    margin-bottom: 15px;
+    width: 150px;
+}
+
+.biografia {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+#lista-skills {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.skill {
+    background: #7b9cb3;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+
+.online {
+    background: #627c6d !important;
+    color: white;
+    font-weight: bold;
+}
