@@ -21,3 +21,11 @@ caixaCor.addEventListener("mouseenter", () => {
 caixaCor.addEventListener("mouseleave", () => {
     caixaCor.style.background = "#95a5a6"
 }) //Ele vai ficar assim caso não tiver mouse por cima
+
+const botaoReset = document.getElementById('btn-reset')
+
+botaoReset.addEventListener("click", () =>{
+    contador.textContent = 0
+    campoTexto.value = '' //Deixamos o espaço vazio
+    preview.textContent = 'Digitando:'
+})

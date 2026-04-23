@@ -49,3 +49,13 @@ input {
     border-radius: 8px;
     cursor: crosshair;
 }
+
+#btn-reset {
+    height: 80px;
+    background: #95a5a6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: crosshair;
+}
