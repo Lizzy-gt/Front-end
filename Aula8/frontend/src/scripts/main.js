@@ -19,7 +19,7 @@ function inicializarSubtotal() {
 
     const total = quantidade * precoUnitario;
     precoTexto.textContent = `R$ ${total.toFixed(2).replace(".", ",")}`;
-    precoTexto.style.color = total > 150 ? "#c0392b" : "#e67e22";
+    precoTexto.style.color = total > 150 ? "#c0392b" : "#c0392b";
 
     if (subTexto) {
       subTexto.textContent =
@@ -139,7 +139,7 @@ function atualizarPrecoCard(box) {
   const total = precoUnitario * quantidade;
 
   spanPreco.textContent = `R$ ${total.toFixed(2).replace(".", ",")}`;
-  spanPreco.style.color = total > 150 ? "#c0392b" : "#e67e22";
+  spanPreco.style.color = total > 150 ? "#c0392b" : "#c0392b";
 }
 
 function salvarPedido(pedido) {
@@ -176,7 +176,7 @@ function exibirLinkPedidos() {
     const header = document.querySelector("#topo-loja");
     header.insertAdjacentHTML(
       "beforeend",
-      "<a href='pedidos.html' id='link-ver-pedidos' class='link-pedidos'>" +
+      "<a href='pedido.html' id='link-ver-pedidos' class='link-pedidos'>" +
         "🛒 Ver pedidos (<span id='contador-link'>0</span>)" +
         "</a>",
     );

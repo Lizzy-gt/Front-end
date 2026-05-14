@@ -64,7 +64,7 @@ function renderizarPedidos() {
 
     li.appendChild(textoSpan)
     li.appendChild(btnRemover);
-    lista.appendChild(iteli);
+    lista.appendChild(li);
     total += pedido.subtotal;
   });
 
@@ -73,8 +73,8 @@ function renderizarPedidos() {
   if (spanResumo) spanResumo.textContent = totalFmt;
 
 
-  const totalItens = pedidos.reduce(function (acc, p) {
-    return acc + p.qtd;
+  const totalItens = pedidos.reduce(function (acc, p) { //Vai juntando a quantidade de intens
+    return acc + p.qtd; //Só vai pegar a qtnd do pedido, quando for pegar ele 
   }, 0);
   if (spanContador) {
     spanContador.textContent =

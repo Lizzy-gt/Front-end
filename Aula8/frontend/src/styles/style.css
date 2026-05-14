@@ -1,11 +1,3 @@
-/* :root {
-  --cor-primaria: #a90000;
-  --cor-secundaria: #faebd7;
-  --cor-destaque: #e67e22;
-  --cor-fundo-claro: #f7e4cc;
-  --cor-texto: #000000;
-  /* background-color: var(--cor-fundo-claro); */
-  
 /* --- ESTILO BASE (mantido das aulas anteriores) --- */
 * {
   margin: 0;
@@ -282,7 +274,6 @@
 
 /* =============================================================
    AULA 7 → AULA 8
-   Adicionar estes estilos no final do style.css existente.
    ============================================================= */
 
 /* ── Quantidade moderna — Aula 7 ─────────────────────────────
@@ -375,4 +366,102 @@ a.menu-ativo {
   height: 18px;
   margin-left: 5px;
   vertical-align: middle;
+}
+
+/* =============================================================
+   AULA 9
+   ============================================================= */
+
+/* ── Modal de boas-vindas ────────────────────────────────────
+   Exibido pelo global.js na primeira vez que o cliente acessa.
+   display:none no HTML — JS altera para "flex" quando necessário.
+   ─────────────────────────────────────────────────────────── */
+#modal-boas-vindas {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-bv-conteudo {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.modal-bv-conteudo h2 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.modal-bv-conteudo p {
+  color: #888;
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+}
+
+.modal-bv-conteudo input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+  text-align: center;
+}
+
+.modal-bv-conteudo input:focus {
+  border-color: #e67e22;
+}
+
+.modal-bv-conteudo button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #e67e22;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.modal-bv-conteudo button:hover {
+  background: #d35400;
+}
+
+/* ── Loading e erro no cardápio ──────────────────────────────
+   Exibido por renderizarCardapio() enquanto os dados carregam
+   ou quando ocorre erro na requisição.
+   ─────────────────────────────────────────────────────────── */
+.loading {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #aaa;
+  font-style: italic;
+  padding: 2rem;
+}
+
+.loading.erro {
+  color: #e74c3c;
+}
+
+/* ── Categoria do prato ──────────────────────────────────────
+   Exibida abaixo do nome — vem do campo categoria do banco.
+   ─────────────────────────────────────────────────────────── */
+.card .categoria {
+  font-size: 0.75rem;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
 }
