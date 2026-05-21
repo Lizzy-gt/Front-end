@@ -107,7 +107,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: 12px;
   padding-top: 16px;
   border-top: 2px solid #e0e0e0;
@@ -126,7 +125,14 @@
 .btn-pedidos-grupo {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.btn-limpar-pedidos,
+.btn-voltar-cardapio,
+.btn-enviar-cozinha {
+  white-space: nowrap;
 }
 
 .btn-limpar-pedidos {
@@ -173,10 +179,36 @@
   }
 
   .btn-limpar-pedidos,
-  .btn-voltar-cardapio {
+  .btn-voltar-cardapio,
+  .btn-enviar-cozinha {
     width: 100%;
     text-align: center;
   }
+}
+
+/* ── Botão "Enviar para Cozinha" — Aula 9 ───────────────────
+   Chama POST /pedidos — o momento principal da Fetch API.
+   Destaque em verde para diferenciar dos outros botões.
+   ─────────────────────────────────────────────────────────── */
+.btn-enviar-cozinha {
+  background: #27ae60;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: bold;
+  transition: background 0.15s;
+}
+
+.btn-enviar-cozinha:hover {
+  background: #219150;
+}
+
+.btn-enviar-cozinha:disabled {
+  background: #95a5a6;
+  cursor: not-allowed;
 }
 
 /* =============================================================
@@ -279,4 +311,19 @@
 #resumo-pedidos #valor-total-resumo {
   font-weight: bold;
   color: #e67e22;
+}
+
+/* ── Painel "Conta da Mesa" — Aula 9 ────────────────────────
+   Mostrado ao clicar em "Ver Conta da Mesa".
+   Usa fundo levemente diferente para distinguir do carrinho atual.
+   A lista reutiliza .item-pedido — mesmo padrão visual.
+   ─────────────────────────────────────────────────────────── */
+#lista-conta {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fffbf5;
 }

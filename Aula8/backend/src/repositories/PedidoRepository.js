@@ -2,7 +2,7 @@ const pool = require('../config/database');
 
 class PedidoRepository {
     async findAll() {
-        const [rows] = await pool.query('SELECT * FROM pedido ORDER BY criado_em DESC');
+        const [rows] = await pool.query('SELECT * FROM pedido ORDER BY id DESC');
         return rows;
     }
 

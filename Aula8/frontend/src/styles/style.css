@@ -373,71 +373,9 @@ a.menu-ativo {
    ============================================================= */
 
 /* ── Modal de boas-vindas ────────────────────────────────────
-   Exibido pelo global.js na primeira vez que o cliente acessa.
-   display:none no HTML — JS altera para "flex" quando necessário.
+   Estilos movidos para global.css (Aula 9) — centralizados lá
+   junto com o modal de confirmação (#modal-fechar-conta).
    ─────────────────────────────────────────────────────────── */
-#modal-boas-vindas {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: 200;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal-bv-conteudo {
-  background: #fff;
-  border-radius: 12px;
-  padding: 2rem;
-  width: 90%;
-  max-width: 380px;
-  text-align: center;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-}
-
-.modal-bv-conteudo h2 {
-  color: #2c3e50;
-  margin-bottom: 0.5rem;
-  font-size: 1.3rem;
-}
-
-.modal-bv-conteudo p {
-  color: #888;
-  margin-bottom: 1.25rem;
-  font-size: 0.9rem;
-}
-
-.modal-bv-conteudo input {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  outline: none;
-  text-align: center;
-}
-
-.modal-bv-conteudo input:focus {
-  border-color: #e67e22;
-}
-
-.modal-bv-conteudo button {
-  width: 100%;
-  padding: 0.75rem;
-  background: #e67e22;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.15s;
-}
-
-.modal-bv-conteudo button:hover {
-  background: #d35400;
-}
 
 /* ── Loading e erro no cardápio ──────────────────────────────
    Exibido por renderizarCardapio() enquanto os dados carregam
