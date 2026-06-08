@@ -1,23 +1,3 @@
-/* ==========================================================
-   PEDIDOS.JS — Meus Pedidos (pedidos.html)
-
-   ROADMAP DESTE ARQUIVO:
-   [✔] Aula 8  — renderizarPedidos(): lê localStorage e monta lista com createElement.
-                 configurarLimparPedidos(): remove chave do localStorage e re-renderiza.
-   [✔] Aula 9  — configurarEnviarCozinha(): envia carrinho ao banco via POST /pedidos.
-                   Fluxo: "Pedir Agora" → localStorage → "Enviar para Cozinha" → API.
-                 Conceito de mesa: sessionStorage acumula Total Geral a cada envio.
-                   "Limpar Pedidos" apaga só o carrinho — total da mesa não zera.
-                 gerarBotaoStatus() + avancarStatus(): referência de PATCH em ação —
-                   avança o status do pedido (pendente → preparo → pronto → entregue).
-                 configurarVerConta() + renderizarContaMesa(): painel da conta da mesa,
-                   mostra histórico de tudo que foi enviado à cozinha na sessão.
-   [ ] Futuro  — renderizarFilaCozinha(): painel da cozinha em tempo real.
-                   GET /pedidos com polling ou WebSocket — exibe todos os pedidos
-                   com controle de status para a equipe da cozinha.
-                 Separação de telas: pedidos.html para o cliente,
-                   cozinha.html para a equipe — cada um com sua visão.
-   ========================================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
   renderizarPedidos();
