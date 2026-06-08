@@ -1,8 +1,9 @@
 require('dotenv').config();
+
 const app = require('./app');
 const pool = require('./config/database');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 // Testando conexão de forma assíncrona com Promises e iniciando o servidor
 async function startServer() {

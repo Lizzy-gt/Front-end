@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "http://localhost:4000";
 
 async function buscarProdutos() {
   const response = await fetch(`${BASE_URL}/produtos`);
@@ -12,7 +12,7 @@ async function buscarProdutos() {
 async function criarPedido(cliente, itens) {
   const response = await fetch(`${BASE_URL}/pedidos`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "aplication/json" },
     body: JSON.stringify({ cliente, itens }),
   });
 
@@ -21,7 +21,7 @@ async function criarPedido(cliente, itens) {
   return dados;
 }
 
-async function bsucarPedidos(){
+async function buscarPedidos(){
     const response = await fetch(`${BASE_URL}/pedidos`)
     const dados = await response.json()
 
