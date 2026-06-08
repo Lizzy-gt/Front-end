@@ -1,22 +1,25 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
+const produtoRoutes = require("./produtoRoutes");
+const produtoController = require("../controllers/produtoController");
+const upload = require("../config/multer");
 
-const produtoRoutes = require('./produtoRoutes');
-const cardapioRoutes = require('./cardapioRoutes');
-const pedidoRoutes = require('./pedidoRoutes');
-
-// Rota base (Root endpoint que estava em app.js)
-router.get('/', (req, res) => {
-    res.json({
-        mensagem: "API SaborDigital funcionando 🍝",
-        versao: "1.0.0",
-        arquitetura: "MVC + SOLID (Refatorada)"
-    });
+router.get("/", (req, res) => {
+  res.json({
+    mensagem: "API SABOR DIGITAL",
+    versao: "5.0.8",
+  });
 });
 
-// Registrar domínios de rotas
-router.use('/produtos', produtoRoutes);
-router.use('/cardapios', cardapioRoutes);
-router.use('/pedidos', pedidoRoutes);
+router.post("/upload", (req, res) => {
+  upload.array("arquivo", 5)(req, res, (err) => {
+    if (err) {
+      return res.status(400).json({ sucesso: false, mensagem: err.message });
+    }
+    return produtoController.uploadImagem(req, res);
+  });
+});
+
+router.use("/produtos", produtoRoutes); //Diversas rotas diferente e precisa de um arquivo que centraliza os end points
 
 module.exports = router;

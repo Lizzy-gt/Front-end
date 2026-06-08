@@ -1,0 +1,107 @@
+:root {
+  --bg: #fafafa;
+  --card: #fff;
+  --accent: #ff6b6b;
+  --text: #222;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family:
+    Inter,
+    Segoe UI,
+    Arial,
+    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+}
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+.top h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+.btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 1.25rem;
+}
+.card {
+  background: var(--card);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+}
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+.card-body {
+  padding: 0.75rem;
+}
+.card-body h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+.price {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* modal/edit styles */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 60;
+}
+.modal {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 560px;
+  width: 100%;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+}
+.modal form {
+  display: grid;
+  gap: 0.5rem;
+}
+.modal label {
+  display: block;
+  font-size: 0.9rem;
+}
+.modal input,
+.modal textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+}

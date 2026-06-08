@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cadastrar prato - TechFood</title>
+  <link rel="stylesheet" href="css/cadastro.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Cadastrar prato</h1>
+    <a class="btn" href="index.html">Voltar</a>
+  </header>
+
+  <main class="form-wrap">
+    <form id="formCadastro" class="form">
+      <label>Nome
+        <input name="nome" required />
+      </label>
+      <label>Descrição
+        <textarea name="descricao" rows="4" required></textarea>
+      </label>
+      <label>Preço (ex: 19.90)
+        <input name="preco" inputmode="decimal" required />
+      </label>
+      <label>Categoria
+        <input name="categoria" required />
+      </label>
+      <label>Imagem (arquivo)
+        <input name="imagem" type="file" accept="image/*" />
+      </label>
+      <div class="actions">
+        <button type="submit" class="btn primary">Cadastrar</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="js/cadastro.js"></script>
+</body>
+</html>
