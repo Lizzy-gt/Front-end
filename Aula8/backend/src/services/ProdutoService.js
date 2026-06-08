@@ -27,7 +27,7 @@ class ProdutoService {
     }
 
     async cadastrarProduto(dados) {
-        const { nome, descricao, preco, categoria, disponivel } = dados;
+        const { nome, descricao, preco, categoria, disponivel, imagem } = dados;
 
         if (!nome || !descricao || preco === undefined) {
             throw { status: 400, mensagem: "Nome, descrição e preço são obrigatórios" };
@@ -42,7 +42,8 @@ class ProdutoService {
             descricao: descricao.trim(),
             preco,
             categoria: categoria || null,
-            disponivel: disponivel ?? true
+            disponivel: disponivel ?? true,
+            imagem: imagem || null
         };
 
         const id = await ProdutoRepository.create(novoProduto);

@@ -12,10 +12,10 @@ class ProdutoRepository {
     }
 
     async create(produtoData) {
-        const { nome, descricao, preco, categoria, disponivel } = produtoData;
+        const { nome, descricao, preco, categoria, disponivel, imagem } = produtoData;
         const [result] = await pool.query(
-            'INSERT INTO produto (nome, descricao, preco, categoria, disponivel) VALUES (?, ?, ?, ?, ?)',
-            [nome, descricao, preco, categoria, disponivel]
+            'INSERT INTO produto (nome, descricao, preco, categoria, disponivel, imagem) VALUES (?, ?, ?, ?, ?, ?)',
+            [nome, descricao, preco, categoria, disponivel, imagem]
         );
         return result.insertId;
     }

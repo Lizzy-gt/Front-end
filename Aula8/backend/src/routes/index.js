@@ -11,7 +11,18 @@ router.get("/", (req, res) => {
   });
 });
 
+// Rota de upload com integração de cadastro
 router.post("/upload", (req, res) => {
+  upload.single("arquivo")(req, res, (err) => {
+    if (err) {
+      return res.status(400).json({ sucesso: false, mensagem: err.message });
+    }
+    return produtoController.cadastrarComImagem(req, res);
+  });
+});
+
+// Rota legacy para upload de múltiplos arquivos
+router.post("/upload-multiplo", (req, res) => {
   upload.array("arquivo", 5)(req, res, (err) => {
     if (err) {
       return res.status(400).json({ sucesso: false, mensagem: err.message });
@@ -20,6 +31,6 @@ router.post("/upload", (req, res) => {
   });
 });
 
-router.use("/produtos", produtoRoutes); //Diversas rotas diferente e precisa de um arquivo que centraliza os end points
+router.use("/produtos", produtoRoutes);
 
 module.exports = router;

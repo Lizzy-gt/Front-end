@@ -8,17 +8,7 @@
     <title>TechFood - Painel da Cozinha</title>
   </head>
   <body>
-
-    <!--
-      MODAL DE CONFIRMAÇÃO — Fechar Conta da Mesa          Aula 9
-      Substitui o confirm() nativo do navegador — feio e sem estilo.
-      Segue o mesmo padrão visual do #modal-boas-vindas (index.html):
-        overlay escuro + cartão branco centralizado.
-      display:none — pedidos.js exibe via configurarFecharConta()
-      quando o cliente clica em "✔ Fechar Conta da Mesa".
-      CSS em global.css (reutilizável em outras páginas futuras).
-    -->
-    <div id="modal-fechar-conta" style="display: none;">
+    <div id="modal-fechar-conta" style="display: none">
       <div class="modal-bv-conteudo">
         <h2>&#129518; Fechar Conta da Mesa?</h2>
         <p>
@@ -65,11 +55,6 @@
           <span id="valor-total-resumo">R$ 0,00</span>
         </div>
 
-        <!--
-          Lista de pedidos — começa com uma mensagem padrão.
-          O pedidos.js substitui o conteúdo ao carregar a página.
-          Aula 9: botão "Enviar para Cozinha" abaixo envia os itens à API.
-        -->
         <ol id="lista-pedidos" aria-label="Lista de pedidos realizados">
           <li class="pedido-vazio">
             Nenhum pedido ainda. Acesse o
@@ -84,43 +69,35 @@
             <button id="btn-limpar-pedidos" class="btn-limpar-pedidos">
               &#128465; Limpar Pedidos
             </button>
-            <!--
-              Aula 9: exibe tudo que foi enviado à cozinha nesta sessão.
-              Mostra o histórico acumulado — o somatório é o Total Geral da mesa.
-            -->
+
             <button id="btn-ver-conta" class="btn-voltar-cardapio">
               &#128203; Ver Conta da Mesa
             </button>
-            <!--
-              Aula 9: botão que envia o carrinho do localStorage ao banco de dados.
-              Chama configurarEnviarCozinha() em pedidos.js via POST /pedidos.
-            -->
+
             <button id="btn-enviar-cozinha" class="btn-enviar-cozinha">
               &#127859; Enviar para Cozinha
             </button>
           </div>
         </div>
 
-        <!--
-          Painel da conta da mesa — oculto por padrão.
-          Exibe todos os itens já enviados à cozinha nesta sessão.
-          Aberto/fechado pelo botão "Ver Conta da Mesa" (pedidos.js).
-        -->
-        <div id="painel-conta" style="display:none;">
-          <h3 class="titulo-secao" style="margin-top:32px;">&#129518; Conta da Mesa</h3>
+        <div id="painel-conta" style="display: none">
+          <h3 class="titulo-secao" style="margin-top: 32px">
+            &#129518; Conta da Mesa
+          </h3>
           <ol id="lista-conta" aria-label="Itens enviados à cozinha"></ol>
-          <div class="btn-pedidos-grupo" style="justify-content:flex-end; margin-bottom:16px;">
-            <!--
-              Fechar Conta = encerrar sessão da mesa.
-              Zera total, historico e nome do cliente — volta ao modal de boas-vindas.
-              Pagamento é feito no caixa fora do sistema.
-            -->
-            <button id="btn-fechar-conta" class="btn-enviar-cozinha" style="background:#c0392b;">
+          <div
+            class="btn-pedidos-grupo"
+            style="justify-content: flex-end; margin-bottom: 16px"
+          >
+            <button
+              id="btn-fechar-conta"
+              class="btn-enviar-cozinha"
+              style="background: #c0392b"
+            >
               &#10003; Fechar Conta da Mesa
             </button>
           </div>
         </div>
-
       </section>
     </main>
 

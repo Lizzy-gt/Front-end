@@ -44,7 +44,6 @@
  
         <h2 class="titulo-secao">Nosso Cardápio</h2>
         <div class="vitrine-grid" id="grid-cardapio">
-          <!-- Preenchido pelo main.js via API -->
         </div>
       </section>
     </main>
@@ -58,12 +57,6 @@
       <p id="data-hora-footer"></p>
     </footer>
 
-    <!--
-      Ordem dos scripts — importante:
-      1. global.js → funções compartilhadas (saudação, modal)
-      2. api.js    → funções de fetch (main.js depende delas)
-      3. main.js   → lógica do cardápio
-    -->
     <script src="src/scripts/global.js"></script>
     <script src="src/scripts/api.js"></script>
     <script src="src/scripts/main.js"></script>

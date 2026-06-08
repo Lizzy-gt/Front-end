@@ -1,0 +1,106 @@
+### Ambiente de Teste da API
+### Use com a extensão REST Client do VS Code ou copie os comandos curl
+
+@baseUrl = http://localhost:3000
+
+###
+
+### 1. Verificar Status da API
+GET {{baseUrl}}/
+
+###
+
+### 2. Listar Todos os Produtos
+GET {{baseUrl}}/produtos
+
+###
+
+### 3. Buscar Produto por ID
+GET {{baseUrl}}/produtos/1
+
+###
+
+### 4. Criar Produto (sem imagem) - POST
+POST {{baseUrl}}/produtos
+Content-Type: application/json
+
+{
+  "nome": "Hambúrguer Artesanal",
+  "descricao": "Hambúrguer feito com carne premium e ingredientes frescos",
+  "preco": 35.50,
+  "categoria": "Prato",
+  "disponivel": true
+}
+
+###
+
+### 5. Atualizar Produto - PUT
+PUT {{baseUrl}}/produtos/1
+Content-Type: application/json
+
+{
+  "nome": "Pizza Margherita Premium",
+  "preco": 55.90,
+  "disponivel": true
+}
+
+###
+
+### 6. Deletar Produto - DELETE
+DELETE {{baseUrl}}/produtos/1
+
+###
+
+### 7. Cadastrar com Upload de Imagem
+### Nota: Use Postman ou cURL para isso, pois requer multipart/form-data
+### 
+### cURL:
+### curl -X POST http://localhost:3000/upload \
+###   -F "nome=Sushi Set" \
+###   -F "descricao=Assortimento de sushi fresco" \
+###   -F "preco=89.90" \
+###   -F "categoria=Prato" \
+###   -F "arquivo=@/caminho/para/imagem.jpg"
+
+###
+
+### ========== Exemplos de cURL ==========
+
+# GET - Listar todos os produtos
+# curl http://localhost:3000/produtos
+
+# GET - Buscar produto específico
+# curl http://localhost:3000/produtos/1
+
+# POST - Criar produto
+# curl -X POST http://localhost:3000/produtos \
+#   -H "Content-Type: application/json" \
+#   -d '{
+#     "nome": "Lasanha à Bolonhesa",
+#     "descricao": "Lasanha tradicional com molho caseiro",
+#     "preco": 42.50,
+#     "categoria": "Prato"
+#   }'
+
+# PUT - Atualizar produto
+# curl -X PUT http://localhost:3000/produtos/1 \
+#   -H "Content-Type: application/json" \
+#   -d '{
+#     "preco": 50.00
+#   }'
+
+# DELETE - Deletar produto
+# curl -X DELETE http://localhost:3000/produtos/1
+
+# POST - Upload com imagem (multipart)
+# curl -X POST http://localhost:3000/upload \
+#   -F "nome=Sorvete de Chocolate" \
+#   -F "descricao=Sorvete artesanal de chocolate belga" \
+#   -F "preco=15.90" \
+#   -F "categoria=Sobremesa" \
+#   -F "arquivo=@imagem.jpg"
+
+# POST - Upload multiplo
+# curl -X POST http://localhost:3000/upload-multiplo \
+#   -F "arquivo=@imagem1.jpg" \
+#   -F "arquivo=@imagem2.png"

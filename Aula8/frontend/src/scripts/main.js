@@ -22,6 +22,8 @@
                  Destaque: seção especial para pratos marcados como "destaque".
    ========================================================== */
 
+const BASE_URL = "http://localhost:3000";
+
 document.addEventListener("DOMContentLoaded", function () {
   renderizarCardapio(); // NEW — busca produtos da API e monta os cards
   inicializarVitrine();
@@ -65,11 +67,12 @@ async function renderizarCardapio() {
       card.classList.add("card");
       card.setAttribute("data-id", produto.id); // ID do banco
 
-      // Aula 10: upload de imagens — descomentar as duas linhas abaixo quando
-      // o back-end tiver a rota de upload ativa e a pasta src/images/ populada.
-      // const imgSrc = produto.imagem ? `src/images/${produto.imagem}` : "src/images/espaguete.png";
+      const imgSrc = produto.imagem
+        ? `${BASE_URL}/${produto.imagem}`
+        : "src/images/espaguete.png";
+
       card.innerHTML =
-        // `<img src='${imgSrc}' alt='${produto.nome}'>` +  // Aula 10
+        `<img src='${imgSrc}' alt='${produto.nome}' />` +
         `<h3>${produto.nome}</h3>` +
         `<p class='desc'>${produto.descricao}</p>` +
         `<div class='quantidade-box'>` +

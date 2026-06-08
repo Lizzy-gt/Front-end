@@ -1,6 +1,6 @@
 const BASE_URL = "http://localhost:3000";
 
-async function buscarProduto() {
+async function buscarProdutos() {
   const response = await fetch(`${BASE_URL}/produtos`);
   const dados = await response.json();
 
@@ -12,7 +12,7 @@ async function buscarProduto() {
 async function criarPedido(cliente, itens) {
   const response = await fetch(`${BASE_URL}/pedidos`, {
     method: "POST",
-    headers: { "Content-Type": "aplication/json" },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ cliente, itens }),
   });
 
