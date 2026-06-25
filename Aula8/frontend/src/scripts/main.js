@@ -287,3 +287,35 @@ function atualizarContadorPedidos() {
 //     }
 //   });
 // }
+// const CHAVE_STORAGE = "meus_jogos";
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   configurarFormulario();
+//   // Call render without arguments to load existing data from storage
+//   renderizarJogos(); 
+//   // Removed salvarJogo(jogo) because there is no game to save yet
+//   excluirJogo();
+// });
+
+// /* ============================================================
+//    2) CONFIGURAR SUBMIT DO FORMULÁRIO
+//    ============================================================ */
+// function configurarFormulario() {
+//   const form = document.querySelector("#form-jogo");
+
+//   form.addEventListener("submit", function (event) { // Added 'event' parameter explicitly
+//     event.preventDefault();
+
+//     const jogo = {
+//       titulo: document.querySelector("#input-titulo").value,
+//       produtora: document.querySelector("#input-produtora").value,
+//       nota: Number(document.querySelector("#input-nota").value),
+//       comentario: document.querySelector("#input-comentario").value,
+//     };
+
+//     // 'jogo' is defined here, so it works inside this block
+//     salvarJogo(jogo);
+//     form.reset();
+//     renderizarJogos();
+//   });
+// }
